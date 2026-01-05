@@ -1,2 +1,2 @@
 # Baking
-Baked goodies
+Baked Goodies
