@@ -220,6 +220,20 @@
     overflow: hidden;
 }
 
+#pullup img.fullScreenImg {
+    position: fixed;
+    top: var(--navHeight);
+    left: 0;
+    width: 100%;
+    max-width: unset !important;
+    height: calc(100% - var(--navHeight));
+    object-fit: contain !important;
+    background-color: #fff;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 0;
+}
+
 #pullup figure {
     max-width: 100%;
     margin-bottom: 2.5rem;
