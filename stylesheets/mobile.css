@@ -8,7 +8,7 @@
 
 .mobile #logo {
     display: fixed;
-    margin-left: calc(50vw - 3.25rem);
+    /* margin-left: calc(50vw - 3.25rem); */
 }
 
 .mobile .mobileMenu {
@@ -22,6 +22,7 @@
     padding: 5rem 2.2rem;
     background: var(--BGColor);
     box-shadow: 0 0 1rem #0003;
+    z-index: 1;
 }
 
 .mobile .mobileMenu a {

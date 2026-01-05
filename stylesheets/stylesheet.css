@@ -192,6 +192,10 @@ em {
 /* Images -------------------------------------------------------------------*/
 
 #logo{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 5.5rem;
   aspect-ratio: 1 / 1;
   background: url("../images/about/cake.png") center no-repeat;
