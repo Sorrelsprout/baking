@@ -97,4 +97,30 @@ $(document).ready(function(){
     function hidePullup(){
         $("#pullup").removeClass("show").scrollTop(0);
     }
+
+    // Image Zooming -----------------------------------------------------------------
+
+    document.body.addEventListener('click', handleClick);
+    function handleClick(event) {
+        const clickedElement = event.target;
+
+        // Check if the clicked element's tag name is 'IMG' (case-insensitive)
+        if (clickedElement.tagName === 'IMG') {
+            console.log('Image clicked:', clickedElement.alt);
+            clickedElement.classList.toggle("fullScreenImg");
+        } else {
+            removeClassFromAll('fullScreenImg');
+            console.log('Non-image element clicked:', clickedElement.tagName);
+        }
+    }
+
+    function removeClassFromAll(classNameToRemove) {
+        // Select all elements that currently have the specified class name
+        const elements = document.querySelectorAll(`.${classNameToRemove}`);
+        // Iterate over the collection of elements and remove the class from each
+        elements.forEach(element => {
+            element.classList.remove(classNameToRemove);
+        });
+    }
+    
 })
