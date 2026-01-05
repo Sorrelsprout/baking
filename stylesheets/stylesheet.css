@@ -154,7 +154,7 @@ nav > span:last-child a:last-child {
   padding: 0 0.5rem;
 }
 
-.projectDescription .tripDates { font-weight: 600; opacity: 0.75; font-size: 0.85rem; }
+.projectDescription .dates { font-weight: 600; opacity: 0.75; font-size: 0.85rem; }
 
 
 /* Footer -------------------------------------------------------------------*/
@@ -192,8 +192,10 @@ em {
 /* Images -------------------------------------------------------------------*/
 
 #logo{ 
-  width: auto; height: 3rem;
-  background: url("../images/about/cake.png");
+  width: 5.5rem;
+  aspect-ratio: 1 / 1;
+  background: url("../images/about/cake.png") center no-repeat;
+  background-size: contain;
 }
 
 /* Transitions ---------------------------------------------------------------*/
@@ -240,186 +242,4 @@ body {
   .projectContainer .projectDescription { opacity: 1; }
   .projectContainer:hover img { opacity: 1; }  
   .projectContainer:hover .projectDescription { opacity: 0; }
-}
-
-
-/* Boba ----------------------------------------------------------------------*/
-
-.boba {
-  display: block;
-  position: absolute;
-  left: 50.2%;
-  margin-bottom: 2rem;
-  width: 2px;
-  background: rgba(243, 243, 243, 0.7);
-  
-  border-radius: 0px;
-  border-bottom: 250px solid rgba(221, 221, 221, 0.568);
-  box-shadow: 
-  3px 0px 1px 2px rgba(167, 101, 2, 0),
-  4px 2px 0 4px rgba(121, 121, 121, 0),
-  -1px 0px 0 1px rgba(167, 101, 2, 0),
-
-  2px 0px 2px 2px rgba(165, 165, 165, 0.5),
-  4px 2px 0 4px rgba(121, 121, 121, 0.5),
-  -2px 0px 0 2px rgba(165, 165, 165, 0.5);
-  
-  -webkit-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-}
-
-.boba:hover{
-  width: 2px;
-  background: rgba(243, 243, 243, 0.4);
-  
-  border-radius: 0px;
-  border-bottom: 250px solid rgba(221, 221, 221, 0.568);
-  transform: rotate(12deg);
-  box-shadow: 
-  3px 0px 2px 2px rgba(146, 107, 49, 0.8),
-  4px 2px 0 4px rgba(121, 121, 121, 0),
-  -1px 0px 2px 1px rgba(173, 139, 88, 0.8),
-
-  2px 0px 2px 2px rgba(165, 165, 165, 0.5),
-  4px 2px 0 4px rgba(121, 121, 121, 0.5),
-  -2px 0px 0 2px rgba(165, 165, 165, 0.5);
-  
-  -webkit-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-}
-
-.boba::before{
-  transform: rotate(-12deg) translate(-80px, 80px);
-  content: "";
-  position: absolute;
-  top: -36px;
-  display: block;
-
-  border-radius: 8px;
-  height: 200px;
-  width: 124px;
-  background:
-  linear-gradient(rgba(226, 219, 196, 0.808) 2%, rgba(165, 165, 165, 0.5) 2%, rgba(165, 165, 165, 0.5) 4%, #fff0 4%),
-    
-    linear-gradient(-96deg, rgba(133, 88, 53, 0.2) 30% 40%, rgba(0, 0, 0, 0) 30%) 62px 0px,
-    linear-gradient(96deg, rgba(101, 61, 32, 0.2) 30% 40%, rgba(0, 0, 0, 0) 30%) 62px 0px,
-
-    linear-gradient(-96deg, rgba(167, 101, 2, 0.6) 35%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 100%) 62px 4px,
-    linear-gradient(96deg, rgba(133, 81, 3, 0.6) 35%,rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 100%) 62px 4px;
-
-  /* box-shadow: 0px 10px 0px 2px green; */
-}
-
-.boba:hover::before{
-  background:
-    linear-gradient(rgba(226, 219, 196, 0.808) 2%, rgba(165, 165, 165, 0.5) 2%, rgba(165, 165, 165, 0.5) 4%, #fff0 4%),
-    
-    linear-gradient(-96deg, rgba(133, 88, 53, 0.2) 30% 40%, rgba(0, 0, 0, 0) 30%) 62px 0px,
-    linear-gradient(96deg, rgba(101, 61, 32, 0.2) 30% 40%, rgba(0, 0, 0, 0) 30%) 62px 0px,
-
-    linear-gradient(-96deg, rgba(167, 101, 2, 0.6) 35%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 100%) 62px 4px,
-    linear-gradient(96deg, rgba(133, 81, 3, 0.6) 35%,rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 100%) 62px 4px;
-
-  /* box-shadow: 0px 10px 0px 2px green; */
-}
-
-.boba::after{
-  transform: rotate(-12deg) translate(-80px, 20px);
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  margin-left: -20px;
-  
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  box-shadow: 
-    /** Dark Boba **/
-    40px 197px 0 5px rgb(51, 26, 10),
-    43px 226px 0 5px rgb(51, 26, 10),
-    58px 220px 0 5px rgb(51, 26, 10),
-    60px 193px 0 5px rgb(51, 26, 10),
-    75px 182px 0 5px rgb(51, 26, 10),
-    78px 226px 0 5px rgb(51, 26, 10),
-    83px 208px 0 5px rgb(51, 26, 10),
-    90px 198px 0 5px rgb(51, 26, 10),
-    /** Light Boba **/
-    42px 208px 0 5px rgba(51, 26, 10, 0.5),
-    46px 180px 0 5px rgba(51, 26, 10, 0.5),
-    66px 214px 0 5px rgba(51, 26, 10, 0.5),
-    70px 194px 0 5px rgba(51, 26, 10, 0.5),
-    88px 190px 0 5px rgba(51, 26, 10, 0.5),
-    88px 220px 0 5px rgba(51, 26, 10, 0.5),
-    /** Lonely Boba **/
-    54px 200px 0 3.5px rgba(51, 26, 10, 0.5);
-
-  -webkit-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-}
-
-.boba:hover::after{
-  box-shadow: 
-    /** Dark Boba **/
-    40px 200px 0 5px rgb(51, 26, 10),
-    43px 227px 0 5px rgb(51, 26, 10),
-    58px 221px 0 5px rgb(51, 26, 10),
-    60px 198px 0 5px rgb(51, 26, 10),
-    75px 186px 0 5px rgb(51, 26, 10),
-    78px 227px 0 5px rgb(51, 26, 10),
-    83px 209px 0 5px rgb(51, 26, 10),
-    90px 200px 0 5px rgb(51, 26, 10),
-    /** Light Boba **/
-    42px 209px 0 5px rgba(51, 26, 10, 0.5),
-    46px 187px 0 5px rgba(51, 26, 10, 0.5),
-    66px 215px 0 5px rgba(51, 26, 10, 0.5),
-    70px 196px 0 5px rgba(51, 26, 10, 0.5),
-    88px 192px 0 5px rgba(51, 26, 10, 0.5),
-    88px 222px 0 5px rgba(51, 26, 10, 0.5),
-    /** Lonely Boba **/
-    80px 80px 0 3.5px rgba(51, 26, 10, 0.5);
-    
-  -webkit-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition: all 800ms cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -moz-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  -o-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
-  transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
-}
-
-nav .boba {
-  transform: scale(0.25) rotate(12deg) !important;
-  margin-bottom: 0;
-}
-
-@media (max-width: 1199px){
-  nav .boba { 
-    position: relative;
-    margin: 0 0 0 2px !important;
-    z-index: -1;
-  }
-}
-
-.aboutSection .boba {
-  position: relative;
 }
