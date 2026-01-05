@@ -141,6 +141,7 @@
 #pullup .footer .copyright, #pullup .footer i {
     padding: 0;
     margin: 0;
+    font-style: normal;
 }
 
 #pullup .footer .btt { border-bottom: none; }
