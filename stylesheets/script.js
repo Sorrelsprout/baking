@@ -88,6 +88,11 @@ $(document).ready(function(){
 
     function setPullup() {
         $("#pullupContent").addClass("show");
+        
+        $("#pullup").addClass("setScroll");
+        $("#pullup").scrollTop(0);
+        $("#pullup").removeClass("setScroll");
+
         $("#pullup").addClass("show"); 
     }
 

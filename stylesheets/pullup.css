@@ -17,6 +17,8 @@
     scroll-behavior: smooth;
 }
 
+#pullup.setScroll { scroll-behavior: auto; }
+
 #pullup.show { top: 6rem; }
 
 #pullupToggle {
