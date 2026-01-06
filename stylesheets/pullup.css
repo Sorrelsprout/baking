@@ -219,6 +219,7 @@
     padding: 2px;
     border-radius: 0.5rem;
     overflow: hidden;
+    cursor: zoom-in;
 }
 
 #pullup img.fullScreenImg {
@@ -233,6 +234,7 @@
     z-index: 1;
     padding: 1rem;
     border-radius: 0;
+    cursor: zoom-out;
 }
 
 #pullup figure {
