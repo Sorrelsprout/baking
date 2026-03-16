@@ -107,12 +107,18 @@ $pageMargin: 2rem;
             text-align: center;
             &:not(:last-child) { margin-bottom: $pageMargin; }
         }
-        h2 { 
+        h2, h3 {
             color: $coffee;
-            font-size: 2rem;
             text-transform: uppercase;
+        }
+        h2 {
+            font-size: 2rem;
             letter-spacing: 0.125rem;
             &:not(:last-child) { margin-bottom: 0.5rem; }
+        }
+        h3 {
+            font-size: 1.5rem;
+            letter-spacing: 0.15rem;
         }
         p { 
             @include fontBody(); 

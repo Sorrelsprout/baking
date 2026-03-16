@@ -338,14 +338,20 @@ body {
 #navlinksPopup .content > *:not(:last-child) {
   margin-bottom: 2rem;
 }
-#navlinksPopup .content h2 {
+#navlinksPopup .content h2, #navlinksPopup .content h3 {
   color: #322621;
-  font-size: 2rem;
   text-transform: uppercase;
+}
+#navlinksPopup .content h2 {
+  font-size: 2rem;
   letter-spacing: 0.125rem;
 }
 #navlinksPopup .content h2:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+#navlinksPopup .content h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
 }
 #navlinksPopup .content p {
   font-family: "Alegreya Sans", sans-serif;
