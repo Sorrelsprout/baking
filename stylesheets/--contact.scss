@@ -3,7 +3,8 @@
 $coffee: #322621;
 $lightCoffee: #615049;
 $lightCoffee50: #61504980;
-$verylightCoffee: #a18e86;
+$verylightCoffee: #948178;
+$verylightCoffeeBorder: #94817882;
 $warning: #f87d58;
 
 $navHeight: 6rem;
@@ -156,14 +157,15 @@ $pageMargin: 2rem;
                 padding: 0 $formPadding;
                 background: linear-gradient(to bottom, $BGColor, $BGColor 40%, $BGColor 40%, $BGColor 100%);
                 border-radius: 0.25rem;
+                color: $lightCoffee;
             }
             input, textarea { 
                 @include fontBody();
                 flex: 1;
                 padding: calc($formPadding * 3) calc($formPadding * 2) calc($formPadding * 2) calc($formPadding * 2);
-                color: $verylightCoffee;
+                color: $coffee;
                 background: $BGColor;
-                border: 1px solid $lightCoffee50;
+                border: 1px solid $verylightCoffeeBorder;
                 border-radius: 0.25rem;
                 &:-webkit-autofill {
                     -webkit-box-shadow: 0 0 0px 1000px $BGColor inset;
@@ -171,7 +173,10 @@ $pageMargin: 2rem;
                 }
                 &:focus {
                     outline: none;
-                    border: 1px solid $verylightCoffee;
+                    border: 2px solid $lightCoffee50;
+                    margin: -1px 0;
+                    &:first-child { margin: 0 0 -1px 0; }
+                    &:last-child { margin: -1px 0 0 0; }
                 }
             }
             textarea { 

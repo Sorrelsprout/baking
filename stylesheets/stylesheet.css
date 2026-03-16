@@ -365,7 +365,7 @@ body {
 }
 #navlinksPopup .content a {
   font-weight: 800;
-  color: #a18e86;
+  color: #948178;
 }
 
 .contactForm {
@@ -395,6 +395,7 @@ body {
   padding: 0 0.35rem;
   background: linear-gradient(to bottom, #eceae8, #eceae8 40%, #eceae8 40%, #eceae8 100%);
   border-radius: 0.25rem;
+  color: #615049;
 }
 .contactForm .formGroupContainer .formGroup input, .contactForm .formGroupContainer .formGroup textarea {
   font-family: "Alegreya Sans", sans-serif;
@@ -405,18 +406,25 @@ body {
   font-size: 0.925rem;
   flex: 1;
   padding: 1.05rem 0.7rem 0.7rem 0.7rem;
-  color: #a18e86;
+  color: #322621;
   background: #eceae8;
-  border: 1px solid rgba(97, 80, 73, 0.5019607843);
+  border: 1px solid rgba(148, 129, 120, 0.5098039216);
   border-radius: 0.25rem;
 }
 .contactForm .formGroupContainer .formGroup input:-webkit-autofill, .contactForm .formGroupContainer .formGroup textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #eceae8 inset;
-  -webkit-text-fill-color: #a18e86 !important;
+  -webkit-text-fill-color: #948178 !important;
 }
 .contactForm .formGroupContainer .formGroup input:focus, .contactForm .formGroupContainer .formGroup textarea:focus {
   outline: none;
-  border: 1px solid #a18e86;
+  border: 2px solid rgba(97, 80, 73, 0.5019607843);
+  margin: -1px 0;
+}
+.contactForm .formGroupContainer .formGroup input:focus:first-child, .contactForm .formGroupContainer .formGroup textarea:focus:first-child {
+  margin: 0 0 -1px 0;
+}
+.contactForm .formGroupContainer .formGroup input:focus:last-child, .contactForm .formGroupContainer .formGroup textarea:focus:last-child {
+  margin: -1px 0 0 0;
 }
 .contactForm .formGroupContainer .formGroup textarea {
   min-height: 8rem;
