@@ -1,8 +1,12 @@
+@charset "UTF-8";
 @import "./reset.css";
 @import "./mobile.css";
 @import "./pullup.css";
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+/* Setup: Run the following in Terminal:
+   sass --watch stylesheets/stylesheet.scss:stylesheets/stylesheet.css 
+*/
+/* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 :root {
   --BGColor: #eceae8;
   --TextColor: #222;
@@ -20,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   position: relative;
   color: var(--TextColor);
   background: var(--BGColor);
@@ -52,9 +56,9 @@ nav {
 }
 
 nav a {
- text-transform: uppercase;
- margin: 0.5rem 1rem 0.5rem 0;
- letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin: 0.5rem 1rem 0.5rem 0;
+  letter-spacing: 1.1px;
 }
 
 nav > span {
@@ -87,12 +91,12 @@ nav > span:last-child a:last-child {
   filter: brightness(0.65) sepia(15%);
 }
 
-@media (max-width: 767px){
-  #travelLogTitle { margin: 2rem auto 3rem auto; }
+@media (max-width: 767px) {
+  #travelLogTitle {
+    margin: 2rem auto 3rem auto;
+  }
 }
-
 /* Project Grid ---------------------------------------------------------------*/
-
 #projectgrid {
   max-width: 1200px;
   margin: auto;
@@ -154,23 +158,23 @@ nav > span:last-child a:last-child {
   padding: 0 0.5rem;
 }
 
-.projectDescription .dates { font-weight: 600; opacity: 0.75; font-size: 0.85rem; }
-
-
-/* Footer -------------------------------------------------------------------*/
-
-.footer {
-    display: flex;
-    width: 100%;
-    border-top: 1px solid var(--BorderColor);
-    border-bottom: none;
-    margin-top: 1rem;
-    margin-bottom: 0;
+.projectDescription .dates {
+  font-weight: 600;
+  opacity: 0.75;
+  font-size: 0.85rem;
 }
 
+/* Footer -------------------------------------------------------------------*/
+.footer {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid var(--BorderColor);
+  border-bottom: none;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 
 /* General Typography -------------------------------------------------------*/
-
 a {
   cursor: pointer;
   color: var(--LinkColor);
@@ -190,20 +194,18 @@ em {
 }
 
 /* Images -------------------------------------------------------------------*/
-
-#logo{ 
+#logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 5.5rem;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   background: url("../images/about/cake.png") center no-repeat;
   background-size: contain;
 }
 
 /* Transitions ---------------------------------------------------------------*/
-
 a, .projectContainer img, .projectContainer .projectDescription,
 #pullup, #pullupToggle {
   transition: all 0.3s ease-out;
@@ -215,22 +217,28 @@ body {
 }
 
 @keyframes fadeInAnimation {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 /* Queries -------------------------------------------------------------------*/
-
-@media (min-width: 1260px){
-  nav > span:first-child { margin-left: -0.5rem; }
+@media (min-width: 1260px) {
+  nav > span:first-child {
+    margin-left: -0.5rem;
+  }
 }
-
-@media (max-width: 1261px){
-  nav, footer.footer { padding: 0 2rem; }
-  #projectgrid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1261px) {
+  nav, footer.footer {
+    padding: 0 2rem;
+  }
+  #projectgrid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-@media (max-width: 960px){
+@media (max-width: 960px) {
   #projectgrid {
     flex-flow: column wrap;
   }
@@ -239,11 +247,273 @@ body {
     margin-top: 0;
   }
 }
-
-@media (max-width: 600px){
-  #projectgrid { grid-template-columns: 1fr; }
-  .projectContainer img { opacity: 0.5; }
-  .projectContainer .projectDescription { opacity: 1; }
-  .projectContainer:hover img { opacity: 1; }  
-  .projectContainer:hover .projectDescription { opacity: 0; }
+@media (max-width: 600px) {
+  #projectgrid {
+    grid-template-columns: 1fr;
+  }
+  .projectContainer img {
+    opacity: 0.5;
+  }
+  .projectContainer .projectDescription {
+    opacity: 1;
+  }
+  .projectContainer:hover img {
+    opacity: 1;
+  }
+  .projectContainer:hover .projectDescription {
+    opacity: 0;
+  }
 }
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+/* VARIABLES •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+.button {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #615049;
+  display: block;
+  padding: 1rem;
+  background: #322621;
+  color: #eceae8;
+  text-decoration: none;
+  border: none;
+  transition: 0.25s ease;
+  font-weight: 300;
+  cursor: pointer;
+  color: #eceae8;
+  background: #615049;
+  transition: 0.25s ease;
+}
+.button:hover {
+  opacity: 0.75;
+}
+.button:hover::after {
+  opacity: 1;
+}
+
+#navlinksPopup {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5333333333);
+  top: 6rem;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 6rem);
+  z-index: 100;
+}
+#navlinksPopup.engaged {
+  display: block;
+}
+#navlinksPopup.about .content.aboutContent {
+  display: flex;
+}
+#navlinksPopup.about .content.aboutContent img {
+  width: 8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 100%;
+}
+@media screen and (max-width: 768px) {
+  #navlinksPopup.about .content.aboutContent img {
+    width: 5rem;
+  }
+}
+#navlinksPopup.about .content.aboutContent p {
+  text-align: left;
+}
+#navlinksPopup.contact .content.contactContent {
+  display: flex;
+}
+#navlinksPopup .content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50vh;
+  left: calc(50% - 2rem);
+  transform: translate(-50%, calc(-50% - 6rem));
+  width: calc(100% - 4rem);
+  max-width: 32rem;
+  margin: 2rem;
+  padding: 2rem;
+  background: #eceae8;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  #navlinksPopup .content {
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+}
+#navlinksPopup .content > * {
+  text-align: center;
+}
+#navlinksPopup .content > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+#navlinksPopup .content h2 {
+  color: #322621;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+#navlinksPopup .content h2:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+#navlinksPopup .content p {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.68em;
+  color: #615049;
+  font-size: 0.925rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+#navlinksPopup .content a {
+  font-weight: 800;
+  color: #a18e86;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contactForm .formGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.contactForm .formGroupContainer * {
+  text-align: left;
+}
+.contactForm .formGroupContainer .formGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.contactForm .formGroupContainer .formGroup label {
+  position: absolute;
+  top: -0.35rem;
+  left: 0.35rem;
+  padding: 0 0.35rem;
+  background: linear-gradient(to bottom, #eceae8, #eceae8 40%, #eceae8 40%, #eceae8 100%);
+  border-radius: 0.25rem;
+}
+.contactForm .formGroupContainer .formGroup input, .contactForm .formGroupContainer .formGroup textarea {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.68em;
+  color: #615049;
+  font-size: 0.925rem;
+  flex: 1;
+  padding: 1.05rem 0.7rem 0.7rem 0.7rem;
+  color: #a18e86;
+  background: #eceae8;
+  border: 1px solid rgba(97, 80, 73, 0.5019607843);
+  border-radius: 0.25rem;
+}
+.contactForm .formGroupContainer .formGroup input:-webkit-autofill, .contactForm .formGroupContainer .formGroup textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #eceae8 inset;
+  -webkit-text-fill-color: #a18e86 !important;
+}
+.contactForm .formGroupContainer .formGroup input:focus, .contactForm .formGroupContainer .formGroup textarea:focus {
+  outline: none;
+  border: 1px solid #a18e86;
+}
+.contactForm .formGroupContainer .formGroup textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+.contactForm .formGroupContainer .formGroup .required::after {
+  content: "*";
+  display: inline-block;
+  margin-left: 0.125rem;
+  color: #f87d58;
+}
+.contactForm .formSubmit {
+  margin: auto;
+}
+
+/* COMMISSION INFO •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+.contactContent.showCommissionInfo .commissionInfo {
+  display: block;
+}
+.contactContent .commissionInfoToggle {
+  display: inline-block;
+  position: relative;
+  top: -0.35em;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  background: url("../images/about/info.svg") center no-repeat;
+  background-size: contain;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+.contactContent .commissionInfoToggle:hover {
+  opacity: 0.5;
+}
+.contactContent .commissionInfo {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 2rem;
+  background: #eceae8;
+  z-index: 1;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+  .contactContent .commissionInfo {
+    max-height: calc(100vh - 10rem);
+  }
+}
+.contactContent .commissionInfo h2 {
+  margin-bottom: 2rem;
+}
+.contactContent .commissionInfo h3 {
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+.contactContent .commissionInfo h3::before {
+  content: "";
+  display: block;
+  position: relative;
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  height: 1px;
+  background: #615049;
+  opacity: 0.25;
+}
+.contactContent .commissionInfo p {
+  text-align: left;
+}
+.contactContent .commissionInfo .button {
+  margin: 2rem auto 0 auto;
+}
+.contactContent .commissionInfo .button::after {
+  content: "";
+  display: block;
+  top: 1rem;
+  left: 0.6666666667rem;
+  position: fixed;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  background: url("../images/about/arrow.svg") center no-repeat;
+  background-size: contain;
+  opacity: 0.75;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

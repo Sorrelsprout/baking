@@ -1,0 +1,252 @@
+/* VARIABLES •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+$coffee: #322621;
+$lightCoffee: #615049;
+$lightCoffee50: #61504980;
+$verylightCoffee: #a18e86;
+$warning: #f87d58;
+
+$navHeight: 6rem;
+$bodyMaxWidth: 1600px;
+$mobileBreakpoint: 768px;
+$pageMargin: 2rem; 
+
+@mixin fontTitle {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $lightCoffee;
+}
+
+@mixin fontBody {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.68em;
+    color: $lightCoffee;
+    font-size: 0.925rem;
+}
+
+@mixin logoSetup {
+    display: flex;
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+.button {
+    @include fontTitle();
+    display: block;
+    padding: 1rem;
+    background: $coffee;
+    color: $BGColor;
+    text-decoration: none;
+    border: none;
+    transition: 0.25s ease;
+    font-weight: 300;
+    cursor: pointer;
+
+    color: $BGColor;
+    background: $lightCoffee;
+    transition: 0.25s ease;
+    &:hover { 
+        opacity: 0.75; 
+        &::after { opacity: 1; }
+    }
+}
+
+#navlinksPopup {
+    display: none;
+    position: fixed;
+    background: #0008;
+    top: $navHeight;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - $navHeight);
+    z-index: 100;
+    &.engaged { display: block; }
+    &.about { .content.aboutContent { 
+        display: flex; 
+        img { 
+            width: 8rem;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 100%;
+            @media screen and (max-width: $mobileBreakpoint) { width: 5rem; }
+        }
+        p { text-align: left; }
+    } }
+    &.contact { .content.contactContent { display: flex; } }
+    .content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50vh;
+        left: calc(50% - $pageMargin);
+        transform: translate(-50%, calc(-50% - $navHeight));
+        width: calc(100% - ($pageMargin * 2));
+        max-width: 32rem;
+        margin: $pageMargin;
+        padding: $pageMargin;
+        background: $BGColor;
+        align-items: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        @media screen and (max-width: $mobileBreakpoint) { 
+            top: 0;
+            transform: translate(-50%, 0);
+        }
+        > * {
+            text-align: center;
+            &:not(:last-child) { margin-bottom: $pageMargin; }
+        }
+        h2 { 
+            color: $coffee;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.125rem;
+            &:not(:last-child) { margin-bottom: 0.5rem; }
+        }
+        p { 
+            @include fontBody(); 
+            letter-spacing: normal;
+            text-transform: none;
+        }
+        a { 
+            font-weight: 800;
+            color: $verylightCoffee; 
+        }
+    }
+}
+
+.contactForm {
+    $formPadding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .formGroupContainer { 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: $pageMargin;
+        * { text-align: left; }
+        .formGroup { 
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            // @media screen and (max-width: $mobileBreakpoint) { flex-direction: column; }
+            label { 
+                position: absolute;
+                top: calc($formPadding * -1);
+                left: $formPadding;
+                padding: 0 $formPadding;
+                background: linear-gradient(to bottom, $BGColor, $BGColor 40%, $BGColor 40%, $BGColor 100%);
+                border-radius: 0.25rem;
+            }
+            input, textarea { 
+                @include fontBody();
+                flex: 1;
+                padding: calc($formPadding * 3) calc($formPadding * 2) calc($formPadding * 2) calc($formPadding * 2);
+                color: $verylightCoffee;
+                background: $BGColor;
+                border: 1px solid $lightCoffee50;
+                border-radius: 0.25rem;
+                &:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0px 1000px $BGColor inset;
+                    -webkit-text-fill-color: $verylightCoffee !important;
+                }
+                &:focus {
+                    outline: none;
+                    border: 1px solid $verylightCoffee;
+                }
+            }
+            textarea { 
+                min-height: 8rem;
+                resize: vertical;
+            }
+            .required {
+                &::after {
+                    content: "*";
+                    display: inline-block;
+                    margin-left: 0.125rem;
+                    color: $warning;
+                }
+            }
+        }
+    }
+    .formSubmit {
+        margin: auto;
+    }
+}
+
+/* COMMISSION INFO •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+.contactContent {
+    &.showCommissionInfo .commissionInfo { display: block; }
+
+    .commissionInfoToggle {
+        display: inline-block;
+        position: relative;
+        top: -0.35em;
+        width: 0.75rem;
+        aspect-ratio: 1 / 1;
+        background: url("../images/about/info.svg") center no-repeat;
+        background-size: contain;
+        transition: 0.25s ease;
+        cursor: pointer;
+        &:hover { opacity: 0.5; }
+    }
+    .commissionInfo {
+        display: none;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100%; 
+        padding: $pageMargin;
+        background: $BGColor;
+        z-index: 1;
+        overflow-y: scroll;
+        @media screen and (max-width: $mobileBreakpoint) { max-height: calc(100vh - ($navHeight + $pageMargin * 2)); }
+        h2 { margin-bottom: 2rem; }
+        h3 { 
+            margin: 1rem auto; 
+            font-size: 1rem; 
+            &::before {
+                content: "";
+                display: block;
+                position: relative;
+                margin: 1rem 0 2rem 0; 
+                width: 100%;
+                height: 1px;
+                background: $lightCoffee;
+                opacity: 0.25;
+            }
+        }
+        p { text-align: left; }
+        .button {
+            margin: $pageMargin auto 0 auto;
+            &::after {
+                content: "";
+                display: block;
+                top: calc($pageMargin / 2);
+                left: calc($pageMargin / 3);
+                position: fixed;
+                width: 0.75rem;
+                aspect-ratio: 1 / 1;
+                background: url("../images/about/arrow.svg") center no-repeat;
+                background-size: contain;
+                opacity: 0.75;
+            }
+        }
+    }
+}

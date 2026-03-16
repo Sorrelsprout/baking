@@ -86,6 +86,22 @@ $(document).ready(function(){
         setPullup(); /* Project Content Setup */
     });
 
+    $("#contact").click(function(){ 
+        removeNavLinksAll();
+        $("#navlinksPopup").addClass("engaged");
+        $("#navlinksPopup").addClass("contact");
+    });
+    $("#navlinksPopup").on("click",function(e){
+        if (e.target.id !== 'navlinksPopup') return;
+        $("#navlinksPopup").removeClass("engaged");
+        removeNavLinksAll();
+    });
+    function removeNavLinksAll() {
+        $("#navlinksPopup").removeClass("about");
+        $("#navlinksPopup").removeClass("contact");
+        commissionReset();
+    }
+
     function setPullup() {
         $("#pullupContent").addClass("show");
         
@@ -120,4 +136,13 @@ $(document).ready(function(){
         elements.forEach(element => { element.classList.remove(classNameToRemove); });
     }
     
+    // COMISSION INFO --------------------------------------------------------------------------
+
+    $(".commissionInfoToggle").click(function(){ $(this).parent().parent().toggleClass("showCommissionInfo"); });
+    $("#commissionInfoButton").click(function(){ $(this).parent().parent().removeClass("showCommissionInfo"); });
+
+    function commissionReset() {
+        $(".contactContent").removeClass("showCommissionInfo");
+        // $(".commissionInfo").scrollTop = 0; //TODO: NOT WORKING
+    }
 })

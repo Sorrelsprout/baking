@@ -1,0 +1,261 @@
+@import "./reset.css";
+@import "./mobile.css";
+@import "./pullup.css";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* Setup: Run the following in Terminal:
+   sass --watch stylesheets/stylesheet.scss:stylesheets/stylesheet.css 
+*/
+
+$BGColor: #eceae8;
+
+/* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+:root {
+  --BGColor: #eceae8;
+  --TextColor: #222;
+  --LinkColor: #555;
+  --LinkHoverColor: #888;
+  --ProjectContainerBG: #222;
+  --BorderColor: #2223;
+  --SelectionBG: #55423222;
+  --navHeight: 6rem;
+  --navWidth: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  position: relative;
+  color: var(--TextColor);
+  background: var(--BGColor);
+  font-size: 17px;
+}
+
+#main {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav, .footer {
+  display: flex;
+  flex-direction: row;
+  height: var(--navHeight);
+  max-width: var(--navWidth);
+  width: 100%;
+  padding: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  background: var(--BGColor);
+  z-index: 100;
+}
+
+nav a {
+ text-transform: uppercase;
+ margin: 0.5rem 1rem 0.5rem 0;
+ letter-spacing: 1.1px;
+}
+
+nav > span {
+  display: flex;
+  width: 200px;
+  justify-content: flex-start;
+}
+
+nav > span:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > span:last-child a:last-child {
+  margin: 0.5rem 0;
+}
+
+.triplebar {
+  display: none;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+#travelLogTitle {
+  position: relative;
+  display: block;
+  width: 50%;
+  top: 6rem;
+  margin: 2rem auto 4rem auto;
+  filter: brightness(0.65) sepia(15%);
+}
+
+@media (max-width: 767px){
+  #travelLogTitle { margin: 2rem auto 3rem auto; }
+}
+
+/* Project Grid ---------------------------------------------------------------*/
+
+#projectgrid {
+  max-width: 1200px;
+  margin: auto;
+  margin: 6rem 3px 0 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px 2px;
+}
+
+.projectContainer {
+  width: 100%;
+  height: 26rem;
+  margin: 1px;
+  background: var(--ProjectContainerBG);
+  position: relative;
+}
+
+.projectContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectContainer:hover img {
+  opacity: 0.5;
+}
+
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  line-height: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.projectContainer:hover .projectDescription {
+  opacity: 1;
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+}
+
+.projectDescription p:first-child {
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+}
+
+.projectDescription .dates { font-weight: 600; opacity: 0.75; font-size: 0.85rem; }
+
+
+/* Footer -------------------------------------------------------------------*/
+
+.footer {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid var(--BorderColor);
+    border-bottom: none;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* General Typography -------------------------------------------------------*/
+
+a {
+  cursor: pointer;
+  color: var(--LinkColor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--LinkHoverColor);
+}
+
+em {
+  font-style: italic;
+}
+
+::selection {
+  background: var(--SelectionBG);
+}
+
+/* Images -------------------------------------------------------------------*/
+
+#logo{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 5.5rem;
+  aspect-ratio: 1 / 1;
+  background: url("../images/about/cake.png") center no-repeat;
+  background-size: contain;
+}
+
+/* Transitions ---------------------------------------------------------------*/
+
+a, .projectContainer img, .projectContainer .projectDescription,
+#pullup, #pullupToggle {
+  transition: all 0.3s ease-out;
+}
+
+body {
+  animation: fadeInAnimation 1.5s ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Queries -------------------------------------------------------------------*/
+
+@media (min-width: 1260px){
+  nav > span:first-child { margin-left: -0.5rem; }
+}
+
+@media (max-width: 1261px){
+  nav, footer.footer { padding: 0 2rem; }
+  #projectgrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 960px){
+  #projectgrid {
+    flex-flow: column wrap;
+  }
+  .footer {
+    border-top: none;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px){
+  #projectgrid { grid-template-columns: 1fr; }
+  .projectContainer img { opacity: 0.5; }
+  .projectContainer .projectDescription { opacity: 1; }
+  .projectContainer:hover img { opacity: 1; }  
+  .projectContainer:hover .projectDescription { opacity: 0; }
+}
+
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+@import "./--contact.scss";

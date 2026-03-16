@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="SorrelSprout Baked Goodies">
+    <meta name="description" content="Lindaicing Baked Goodies">
     <meta name="keywords" content="baking, baked goods, blog, websites, html, html5, css, css3, js, javascript">
-    <meta name="author" content="SorrelSprout">
+    <meta name="author" content="Lindaicing">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="origin">
     <title>Baking</title>
@@ -22,6 +22,7 @@
             <div class="triplebar">≡</div>
             <span class="mobileMenu">
                 <!-- <a id="travel">Adventures</a> -->
+                <a id="contact" rel="noreferrer" title="Contact" href="#/">Contact</a>
             </span>
             <div id="logo" title="Made with 🎂 by yours truly"></div>
             <span class="mobileMenu">
@@ -29,7 +30,54 @@
             </span>
         </nav>
 
-        <!-- <img src="./images/about/travellog.png" alt="Travel Log" id="travelLogTitle"> -->
+<!-- ANNOUNCEMENT ------------------------------------------------------------------------------------------------>
+
+        <div id="navlinksPopup">
+            <div class="content aboutContent">
+                <h2>About</h2>
+                <img src="./images/about/profile.jpg" alt="Hello!">
+                <p>Hello! My name is Linda and I paint plant pots inspired by native and naturalized organisms in the PNW region, local scenery from hikes and nearby neighborhoods, and organic forms and color palettes from the natural world. The goal is to fuel my plant hoarding by selling some of my art. Pieces are made with acrylic and ink on terracotta plant pots, and then coated with polyurethane/liquitex varnish for waterproofing/weather protection.</p>
+                <p class="hideOnMobile">When I'm not painting or gardening (or working my day job), I'm either attending events with <a href="https://www.meetup.com/viva-la-vegan" target="_blank" rel="noreferrer">NW Veg</a> and <a href="https://www.meetup.com/portland-metro-veggies" target="_blank" rel="noreferrer">Portland Metro Veggies</a>, keeping up with the <a href="https://www.wildmushrooms.org" target="_blank" rel="noreferrer">Oregon Mycological Society</a>, playing guitar, hiking, gardening, or spending time with friends. I love finding new plant-based eateries and spotting fungi and wildflowers on walks. Thank you for visiting my site!</p>
+            </div>
+
+            <div class="content contactContent">
+                <h2>Contact</h2>
+                <p>Please reach out for commission inquiries<span class="commissionInfoToggle" title="Click for comission information and FAQs"></span> and questions!</p>
+                <div class="commissionInfo">
+                    <h2>Commissions</h2>
+                    <p>Coming Soon!</p>
+                    <button id="commissionInfoButton" class="button" title="Go back">Got it</button>
+                </div>
+                <p style="display:none;">Email: <a id="email" rel="noreferrer" title="Email" href="mailto:lindaicing@gmail.com">lindaicing@gmail.com</a></p>
+
+                <form class="contactForm" action="https://api.web3forms.com/submit" method="POST" target="_blank">
+                    <input type="hidden" name="access_key" value="eff7715f-dcf2-4231-b008-9f6961bb42f8" />
+                    <input type="hidden" name="subject" value="New Contact Form Submission from lindaicing.com" />
+                    <input type="hidden" name="from_name" value="lindaicing.com" />
+                    <div class="formGroupContainer">
+                        <div class="formGroup">
+                            <label for="name" class="form-label">Name<span class="required"></span></label>
+                            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                        </div>
+                        <div class="formGroup">
+                            <label for="email" class="form-label">Email<span class="required"></span></label>
+                            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+                        </div>
+                        <div class="formGroup">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(123) 456-7890" type="text" />
+                        </div>
+                        <div class="formGroup">
+                            <label for="message" class="form-label">Message<span class="required"></span></label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required ></textarea>
+                        </div>
+                    </div>
+                    <button class="formSubmit button" type="submit" title="Send your message">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+<!-- HOMEPAGE ---------------------------------------------------------------------------------------------------->
 
         <div id="projectgrid">
             <!-- 2026 -->
@@ -125,6 +173,8 @@
                 </div>
             </div> -->
         </div>
+        
+<!-- PULLUP ------------------------------------------------------------------------------------------------------>
 
         <div id="pullup">
             <span id="pullupToggle">></span>
@@ -133,13 +183,13 @@
                 <div class="fullDescription"></div>
             </div>
             <div class="footer">
-                <p class="copyright">Sorrel <span class="currentYear"></span></p>
+                <p class="copyright">Lindaicing <span class="currentYear"></span></p>
                 <a href="#pullupToggle" class="btt" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
             </div>
         </div>
 
         <footer class="footer">
-            <p class="copyright">Sorrel <span class="currentYear"></span></p>
+            <p class="copyright">Lindaicing <span class="currentYear"></span></p>
             <a href="#main" class="btt" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
         </footer>
     </div>
