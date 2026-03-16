@@ -25,6 +25,11 @@
     z-index: 1;
 }
 
+.mobile #navlinksPopup {
+    top: 0;
+    height: 100vh;
+}
+
 .mobile .mobileMenu a {
     margin-bottom: 1rem;
 }
@@ -34,8 +39,7 @@
 }
 
 .mobile .mobileMenu:last-child {
-    /* top: 7.5rem; */
-    top: 5rem;
+    top: 7.5rem;
     background: none;
     padding: 0 2.2rem;
     justify-content: flex-start;

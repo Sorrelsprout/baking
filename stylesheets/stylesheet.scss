@@ -57,46 +57,28 @@ nav {
   position: fixed;
   background: var(--BGColor);
   z-index: 100;
-}
 
-nav a {
- text-transform: uppercase;
- margin: 0.5rem 1rem 0.5rem 0;
- letter-spacing: 1.1px;
-}
-
-nav > span {
-  display: flex;
-  width: 200px;
-  justify-content: flex-start;
-}
-
-nav > span:last-child {
-  display: flex;
-  justify-content: flex-end;
-}
-
-nav > span:last-child a:last-child {
-  margin: 0.5rem 0;
+  a {
+    text-transform: uppercase;
+    margin: 0.5rem 1rem 0.5rem 0;
+    letter-spacing: 1.1px;
+  }
+  > span {
+    display: flex;
+    width: 200px;
+    justify-content: flex-start;
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      a:last-child { margin: 0.5rem 0; }
+    }
+  }
 }
 
 .triplebar {
   display: none;
   font-size: 2.5em;
   cursor: pointer;
-}
-
-#travelLogTitle {
-  position: relative;
-  display: block;
-  width: 50%;
-  top: 6rem;
-  margin: 2rem auto 4rem auto;
-  filter: brightness(0.65) sepia(15%);
-}
-
-@media (max-width: 767px){
-  #travelLogTitle { margin: 2rem auto 3rem auto; }
 }
 
 /* Project Grid ---------------------------------------------------------------*/

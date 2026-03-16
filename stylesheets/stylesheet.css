@@ -54,24 +54,20 @@ nav {
   background: var(--BGColor);
   z-index: 100;
 }
-
 nav a {
   text-transform: uppercase;
   margin: 0.5rem 1rem 0.5rem 0;
   letter-spacing: 1.1px;
 }
-
 nav > span {
   display: flex;
   width: 200px;
   justify-content: flex-start;
 }
-
 nav > span:last-child {
   display: flex;
   justify-content: flex-end;
 }
-
 nav > span:last-child a:last-child {
   margin: 0.5rem 0;
 }
@@ -82,20 +78,6 @@ nav > span:last-child a:last-child {
   cursor: pointer;
 }
 
-#travelLogTitle {
-  position: relative;
-  display: block;
-  width: 50%;
-  top: 6rem;
-  margin: 2rem auto 4rem auto;
-  filter: brightness(0.65) sepia(15%);
-}
-
-@media (max-width: 767px) {
-  #travelLogTitle {
-    margin: 2rem auto 3rem auto;
-  }
-}
 /* Project Grid ---------------------------------------------------------------*/
 #projectgrid {
   max-width: 1200px;
@@ -346,8 +328,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   #navlinksPopup .content {
-    top: 0;
-    transform: translate(-50%, 0);
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 6rem));
   }
 }
 #navlinksPopup .content > * {
