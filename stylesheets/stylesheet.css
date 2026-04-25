@@ -181,6 +181,10 @@ em {
   background-size: contain;
   aspect-ratio: 1/1;
 }
+#logo.cake {
+  width: 5.5rem;
+  background-image: url("../images/about/cake.png");
+}
 
 /* Transitions ---------------------------------------------------------------*/
 a, .projectContainer img, .projectContainer .projectDescription,

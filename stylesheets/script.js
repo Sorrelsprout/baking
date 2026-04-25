@@ -32,12 +32,16 @@ $(document).ready(function(){
 
 
     // Hero Fix ----------------------------------------------------------------------
-    var conHeight = $("#pullup .hero").height();
-    var imgHeight = $("#pullup .hero img").height();
-    var gap = (imgHeight - conHeight) / 2;
+    let conHeight = $("#pullup .hero").height();
+    let imgHeight = $("#pullup .hero img").height();
+    let gap = (imgHeight - conHeight) / 2;
     $("#pullup .hero img").css("top", -gap);
 
 
+    // Logo Randomizer ---------------------------------------------------------------
+    let logo = document.getElementById("logo");
+    let oneOrZero = (Math.random()>0.75)? 1 : 0; // 1/4 chance of cake?
+    if(oneOrZero === 1) { logo.classList.add("cake"); }
 
     // Pullup ------------------------------------------------------------------------
     $(".projectContainer").click(function() { 
@@ -136,7 +140,7 @@ $(document).ready(function(){
         elements.forEach(element => { element.classList.remove(classNameToRemove); });
     }
     
-    // COMISSION INFO --------------------------------------------------------------------------
+    // COMMISSION INFO --------------------------------------------------------------------------
 
     $(".commissionInfoToggle").click(function(){ $(this).parent().parent().toggleClass("showCommissionInfo"); });
     $("#commissionInfoButton").click(function(){ $(this).parent().parent().removeClass("showCommissionInfo"); });
