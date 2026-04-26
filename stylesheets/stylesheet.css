@@ -71,6 +71,15 @@ nav > span:last-child {
 nav > span:last-child a:last-child {
   margin: 0.5rem 0;
 }
+nav #insta {
+  margin: 0.45rem 1.5rem 0.45rem 0;
+}
+@media (max-width: 1199px) {
+  nav #insta {
+    order: 2;
+    margin-top: 1rem;
+  }
+}
 
 .triplebar {
   display: none;

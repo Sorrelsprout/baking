@@ -73,6 +73,14 @@ nav {
       a:last-child { margin: 0.5rem 0; }
     }
   }
+
+  #insta { 
+    margin: 0.45rem 1.5rem 0.45rem 0;
+    @media (max-width: 1199px){ 
+      order: 2;
+      margin-top: 1rem;
+    }
+  }
 }
 
 .triplebar {
