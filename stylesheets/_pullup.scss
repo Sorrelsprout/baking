@@ -11,7 +11,7 @@
     width: 100%;
     height: calc(100vh - 6rem);
     padding: 5rem 5rem 0rem 5rem;
-    background: var(--BGColor);
+    background: $BGColor;
     z-index: 1;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -118,8 +118,8 @@
     height: 8rem;
     margin-bottom: 0;
     object-fit: cover;
-    box-shadow: 0 0 0 0.4rem var(--BGColor);
-    background: var(--BGColor);
+    box-shadow: 0 0 0 0.4rem $BGColor;
+    background: $BGColor;
     border-radius: 100% !important;
     z-index: 1;
 }

@@ -114,10 +114,10 @@ $(document).ready(function(){
         $("#pullup").removeClass("setScroll");
 
         $("#pullup").addClass("show"); 
+        preventBack();
     }
 
     $("#pullupToggle").click(function() { hidePullup() });
-    // $("#travel").click(function() { hidePullup() });
     $("#logo").click(function() { hidePullup() });
     function hidePullup(){
         $("#pullup").removeClass("show").scrollTop(0);
@@ -149,4 +149,16 @@ $(document).ready(function(){
         $(".contactContent").removeClass("showCommissionInfo");
         // $(".commissionInfo").scrollTop = 0; //TODO: NOT WORKING
     }
+
+    // HANDLE BACK BUTTON -----------------------------------------------------------------------
+
+    function preventBack() { window.history.pushState(null, "", window.location.href); } // Function to push current state into history stack
+
+    // Listen for the 'popstate' event (triggered by back/forward buttons)
+    window.onpopstate = function() { 
+        preventBack();  // Immediately push state back to trap the user on this page
+        removeNavLinksAll();
+        hidePullup();
+        $("#navlinksPopup").removeClass("engaged");
+    };
 })

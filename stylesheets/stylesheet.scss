@@ -1,6 +1,6 @@
 @import "./reset.css";
 @import "./mobile.css";
-@import "./pullup.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 /* Setup: Run the following in Terminal:
@@ -8,6 +8,17 @@
 */
 
 $BGColor: #eceae8;
+$coffee: #322621;
+$lightCoffee: #615049;
+$lightCoffee50: #61504980;
+$verylightCoffee: #948178;
+$verylightCoffeeBorder: #94817882;
+$warning: #f87d58;
+
+$navHeight: 6rem;
+$bodyMaxWidth: 1600px;
+$mobileBreakpoint: 768px;
+$pageMargin: 2rem; 
 
 /* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
@@ -30,8 +41,8 @@ html {
 body {
   font-family: 'Alegreya Sans', sans-serif;
   position: relative;
-  color: var(--TextColor);
-  background: var(--BGColor);
+  color: $coffee;
+  background: $BGColor;
   font-size: 17px;
 }
 
@@ -55,7 +66,7 @@ nav, .footer {
 
 nav {
   position: fixed;
-  background: var(--BGColor);
+  background: $BGColor;
   z-index: 100;
 
   a {
@@ -241,4 +252,6 @@ body {
 
 /* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
-@import "./--contact.scss";
+@import "./pullup";
+@import "./contact";
+@import "./pricing";
