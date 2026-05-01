@@ -9,12 +9,6 @@ $(document).ready(function(){
             $("body").removeClass("mobile");
             $(".mobileMenu").css({ "transition": "none" })
         }
-
-        if ($(window).width() < 768) {
-            $("#travelLogTitle").attr("src", "./images/about/travellog-mobile.png");
-        } else {
-            $("#travelLogTitle").attr("src", "./images/about/travellog.png");
-        }
     }
 
     $(".triplebar").click(function() {
@@ -72,13 +66,13 @@ $(document).ready(function(){
         const PROJECTDESC = "pages/" + (PYEAR) + "/" + (PROJECTID) + ".html"
         $("#pullupContent .fullDescription").load(PROJECTDESC); 
 
-        console.log(PROJECTDESC)
+        console.log(PROJECTDESC);
 
         setPullup();
     });
 
     $("#about").click(function() { 
-        $("#pullupContent .fullDescription").load("pages/about.html"); 
+        $("#pullupContent .fullDescription").load("pages/nav/about.html"); 
         $("#pullupContent .hero").css({ 
             "background": "url(images/about/banner-about.jpg)", 
             "background-position":"50% 50%",
