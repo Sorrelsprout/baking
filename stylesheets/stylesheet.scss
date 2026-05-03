@@ -16,7 +16,7 @@ $warning: #f87d58;
 
 $navHeight: 6rem;
 $bodyMaxWidth: 1600px;
-$mobileBreakpoint: 768px;
+$mobileBreakpoint: 1200px;
 $pageMargin: 2rem; 
 
 /* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -75,8 +75,8 @@ nav {
   }
   > span {
     display: flex;
-    width: 200px;
     justify-content: flex-start;
+    @media (max-width: $mobileBreakpoint){ width: 200px; }
     &:last-child {
       display: flex;
       justify-content: flex-end;
@@ -87,7 +87,7 @@ nav {
   #insta, #patreon { 
     margin: 0.45rem 0 0.45rem 1.5rem;
     margin: 0.45rem 1.5rem 0.9rem 0;
-    @media (max-width: 1199px){ 
+    @media (max-width: $mobileBreakpoint){ 
       order: 2;
       margin-top: 0.75rem;
       // margin: 0.45rem 1.5rem 0.9rem 0;

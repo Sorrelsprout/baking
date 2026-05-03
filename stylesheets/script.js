@@ -3,7 +3,7 @@ $(document).ready(function(){
     checkWidth();
     $(window).resize(function() { checkWidth(); })
     function checkWidth() {
-        if ($(window).width() < 1200) {
+        if ($(window).width() <= 1200) {
             $("body").addClass("mobile");
         } else {
             $("body").removeClass("mobile");
