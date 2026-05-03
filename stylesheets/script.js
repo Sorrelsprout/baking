@@ -72,6 +72,7 @@ $(document).ready(function(){
     });
 
     $("#about").click(function() { 
+        removeNavLinksAll();
         $("#pullupContent .fullDescription").load("pages/nav/about.html"); 
         $("#pullupContent .hero").css({ 
             "background": "url(images/about/banner-about.jpg)", 
@@ -89,14 +90,28 @@ $(document).ready(function(){
         $("#navlinksPopup").addClass("engaged");
         $("#navlinksPopup").addClass("contact");
     });
+    $("#pricing").click(function(){ 
+        removeNavLinksAll();
+        $("#navlinksPopup").addClass("engaged");
+        $("#navlinksPopup").addClass("pricing");
+    });
+    $("#cookieDrop").click(function(){ 
+        removeNavLinksAll();
+        $("#navlinksPopup").addClass("engaged");
+        $("#navlinksPopup").addClass("cookieDrop");
+    });
+
     $("#navlinksPopup").on("click",function(e){
         if (e.target.id !== 'navlinksPopup') return;
         $("#navlinksPopup").removeClass("engaged");
         removeNavLinksAll();
     });
     function removeNavLinksAll() {
+        $("#navlinksPopup").removeClass("engaged");
         $("#navlinksPopup").removeClass("about");
         $("#navlinksPopup").removeClass("contact");
+        $("#navlinksPopup").removeClass("pricing");
+        $("#navlinksPopup").removeClass("cookieDrop");
         commissionReset();
     }
 
@@ -112,7 +127,10 @@ $(document).ready(function(){
     }
 
     $("#pullupToggle").click(function() { hidePullup() });
-    $("#logo").click(function() { hidePullup() });
+    $("#logo").click(function() { 
+        hidePullup();
+        removeNavLinksAll();
+    });
     function hidePullup(){
         $("#pullup").removeClass("show").scrollTop(0);
     }
