@@ -112,7 +112,6 @@ $(document).ready(function(){
         $("#navlinksPopup").removeClass("contact");
         $("#navlinksPopup").removeClass("pricing");
         $("#navlinksPopup").removeClass("cookieDrop");
-        commissionReset();
     }
 
     function setPullup() {
@@ -150,16 +149,6 @@ $(document).ready(function(){
         let elements = document.querySelectorAll(`.${classNameToRemove}`);
         // Iterate over the collection of elements and remove the class from each
         elements.forEach(element => { element.classList.remove(classNameToRemove); });
-    }
-    
-    // COMMISSION INFO --------------------------------------------------------------------------
-
-    $(".commissionInfoToggle").click(function(){ $(this).parent().parent().toggleClass("showCommissionInfo"); });
-    $("#commissionInfoButton").click(function(){ $(this).parent().parent().removeClass("showCommissionInfo"); });
-
-    function commissionReset() {
-        $(".contactContent").removeClass("showCommissionInfo");
-        // $(".commissionInfo").scrollTop = 0; //TODO: NOT WORKING
     }
 
     // HANDLE BACK BUTTON -----------------------------------------------------------------------

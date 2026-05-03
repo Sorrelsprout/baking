@@ -85,6 +85,8 @@ $pageMargin: 2rem;
         p { text-align: left; }
     } }
     &.contact { .content.contactContent { display: flex; } }
+    &.pricing { .content.pricingContent { display: flex; } }
+    &.cookieDrop { .content.cookieDropContent { display: flex; } }
     .content {
         display: none;
         flex-direction: column;
@@ -195,69 +197,5 @@ $pageMargin: 2rem;
     }
     .formSubmit {
         margin: auto;
-    }
-}
-
-/* COMMISSION INFO •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-
-.contactContent {
-    &.showCommissionInfo .commissionInfo { display: block; }
-
-    .commissionInfoToggle {
-        display: inline-block;
-        position: relative;
-        top: -0.35em;
-        width: 0.75rem;
-        aspect-ratio: 1 / 1;
-        background: url("../images/about/info.svg") center no-repeat;
-        background-size: contain;
-        transition: 0.25s ease;
-        cursor: pointer;
-        &:hover { opacity: 0.5; }
-    }
-    .commissionInfo {
-        display: none;
-        position: absolute; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        max-height: 100%; 
-        padding: $pageMargin;
-        background: $BGColor;
-        z-index: 1;
-        overflow-y: scroll;
-        @media screen and (max-width: $mobileBreakpoint) { max-height: calc(100vh - ($navHeight + $pageMargin * 2)); }
-        h2 { margin-bottom: 2rem; }
-        h3 { 
-            margin: 1rem auto; 
-            font-size: 1rem; 
-            &::before {
-                content: "";
-                display: block;
-                position: relative;
-                margin: 1rem 0 2rem 0; 
-                width: 100%;
-                height: 1px;
-                background: $lightCoffee;
-                opacity: 0.25;
-            }
-        }
-        p { text-align: left; }
-        .button {
-            margin: $pageMargin auto 0 auto;
-            &::after {
-                content: "";
-                display: block;
-                top: calc($pageMargin / 2);
-                left: calc($pageMargin / 3);
-                position: fixed;
-                width: 0.75rem;
-                aspect-ratio: 1 / 1;
-                background: url("../images/about/arrow.svg") center no-repeat;
-                background-size: contain;
-                opacity: 0.75;
-            }
-        }
     }
 }
