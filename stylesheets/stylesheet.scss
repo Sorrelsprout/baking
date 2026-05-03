@@ -1,5 +1,4 @@
 @import "./reset.css";
-@import "./mobile.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
@@ -81,15 +80,17 @@ nav {
     &:last-child {
       display: flex;
       justify-content: flex-end;
-      a:last-child { margin: 0.5rem 0; }
+      // a:last-child { margin: 0.5rem 0; }
     }
   }
 
   #insta, #patreon { 
-    margin: 0.45rem 1.5rem 0.45rem 0;
+    margin: 0.45rem 0 0.45rem 1.5rem;
+    margin: 0.45rem 1.5rem 0.9rem 0;
     @media (max-width: 1199px){ 
       order: 2;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
+      // margin: 0.45rem 1.5rem 0.9rem 0;
     }
   }
 }
@@ -253,6 +254,7 @@ body {
 /* INCLUDES •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 @import "./pullup";
+@import "./mobile";
 
 @import "./contact";
 @import "./pricing";
