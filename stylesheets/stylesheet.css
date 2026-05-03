@@ -874,6 +874,10 @@ body {
   margin: auto;
 }
 
+.cookieDropContent h4 {
+  margin-top: -1.5rem;
+  line-height: 150%;
+}
 .cookieDropContent .imgContainer {
   position: relative;
   width: 100%;
