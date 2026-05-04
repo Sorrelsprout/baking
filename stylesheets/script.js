@@ -134,6 +134,20 @@ $(document).ready(function(){
         $("#pullup").removeClass("show").scrollTop(0);
     }
 
+    // Commission Pricing Nav --------------------------------------------------------
+
+    let commissionNavItem = document.querySelectorAll(".commissionPriceNav > div");
+    commissionNavItem.forEach(element => {
+        let commissionContainer = element.parentElement.parentElement;
+        element.addEventListener("click", function() { 
+            let currentClass = element.className;
+            commissionNavItem.forEach(e => { e.classList.remove("selected") });
+            commissionContainer.className = "content pricingContent";
+            element.classList.add("selected");
+            commissionContainer.classList.add(currentClass);
+        });
+    });
+    
     // Image Zooming -----------------------------------------------------------------
 
     document.body.addEventListener('click', handleClick);

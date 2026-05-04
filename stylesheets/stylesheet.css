@@ -668,7 +668,7 @@ body {
 }
 
 .mobile .mobileMenu:last-child {
-  top: 10.25rem;
+  top: 12.75rem;
   background: none;
   padding: 0 2.2rem;
   justify-content: flex-start;
@@ -769,9 +769,6 @@ body {
 #navlinksPopup .content > * {
   text-align: center;
 }
-#navlinksPopup .content > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
 #navlinksPopup .content h2, #navlinksPopup .content h3 {
   color: #322621;
   text-transform: uppercase;
@@ -811,7 +808,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .contactForm .formGroupContainer * {
   text-align: left;
@@ -874,11 +871,85 @@ body {
   margin: auto;
 }
 
-.cookieDropContent h4 {
-  margin-top: -1.5rem;
+#navlinksPopup .pricingContent.cookiesComm .cookiesComm {
+  display: flex;
+}
+#navlinksPopup .pricingContent.cupcakesComm .cupcakesComm {
+  display: flex;
+}
+#navlinksPopup .pricingContent.cakeComm .cakeComm {
+  display: flex;
+}
+#navlinksPopup .pricingContent > * {
+  flex-direction: column;
+  width: 100%;
+}
+#navlinksPopup .pricingContent > *.cookiesComm, #navlinksPopup .pricingContent > *.cupcakesComm, #navlinksPopup .pricingContent > *.cakeComm {
+  display: none;
+}
+#navlinksPopup .pricingContent h4 {
   line-height: 150%;
 }
-.cookieDropContent .imgContainer {
+#navlinksPopup .pricingContent .commissionPriceNav {
+  width: auto;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid rgba(148, 129, 120, 0.5098039216);
+}
+#navlinksPopup .pricingContent .commissionPriceNav div {
+  margin-bottom: -1px;
+  padding-bottom: calc(0.25rem - 1px + 0.125rem);
+  border-bottom: 1px solid transparent;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+#navlinksPopup .pricingContent .commissionPriceNav div:not(.selected):hover {
+  padding-bottom: 0.125rem;
+  border-bottom: 0.25rem solid rgba(148, 129, 120, 0.5098039216);
+}
+#navlinksPopup .pricingContent .commissionPriceNav div.selected {
+  padding-bottom: 0.125rem;
+  border-bottom: 0.25rem solid #615049;
+}
+#navlinksPopup .pricingContent hr {
+  flex: 1 100%;
+  opacity: 0.5;
+  width: 100%;
+}
+#navlinksPopup .pricingContent ul {
+  display: flex;
+  width: calc(100% - 0.65rem);
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0.65rem;
+}
+#navlinksPopup .pricingContent ul li {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 125%;
+}
+#navlinksPopup .pricingContent ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+#navlinksPopup .pricingContent ul li:has(hr) {
+  margin: 0rem 0 -0.5rem 0;
+}
+#navlinksPopup .pricingContent ul li:not(:has(hr))::before {
+  position: absolute;
+  content: "●";
+  top: 0;
+  left: -0.775rem;
+  transform: scale(0.5);
+}
+#navlinksPopup .pricingContent .imgContainer {
   position: relative;
   width: 100%;
   max-height: 20rem;
@@ -886,7 +957,27 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.cookieDropContent .imgContainer img {
+#navlinksPopup .pricingContent .imgContainer img {
+  flex: 1;
+  width: 50%;
+  border-radius: 0.25rem;
+}
+
+#navlinksPopup .cookieDropContent h4 {
+  line-height: 150%;
+}
+#navlinksPopup .cookieDropContent p {
+  margin: 2rem;
+}
+#navlinksPopup .cookieDropContent .imgContainer {
+  position: relative;
+  width: 100%;
+  max-height: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#navlinksPopup .cookieDropContent .imgContainer img {
   flex: 1;
   width: 50%;
   border-radius: 0.25rem;

@@ -1,10 +1,11 @@
-// /* VARIABLES •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-
-.cookieDropContent {
+#navlinksPopup  .cookieDropContent {
 
     h4 { 
-        margin-top: -1.5rem;
         line-height: 150%;
+        // margin-top: calc($pageMargin * 1);
+    }
+    p {
+        margin: calc($pageMargin * 1);
     }
     .imgContainer {
         position: relative;
