@@ -950,7 +950,6 @@ body {
   transform: scale(0.5);
 }
 #navlinksPopup .pricingContent .button {
-  margin: 2rem auto auto auto;
   font-family: "Krona One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -959,6 +958,7 @@ body {
   letter-spacing: 0.15em;
   color: #615049;
   display: block;
+  margin: 2rem auto auto auto;
   padding: 0.75rem 1rem;
   background: #322621;
   color: #eceae8;

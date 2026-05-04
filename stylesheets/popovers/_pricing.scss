@@ -66,22 +66,22 @@
     }
 
     .button {
+        @include fontTitle();
+        display: block;
         margin: $pageMargin auto auto auto;
-    @include fontTitle();
-    display: block;
-    padding: 0.75rem 1rem;
-    background: $coffee;
-    color: $BGColor;
-    text-decoration: none;
-    border: none;
-    transition: 0.25s ease;
-    font-size: 0.875rem;
-    font-weight: 300;
-    cursor: pointer;
+        padding: 0.75rem 1rem;
+        background: $coffee;
+        color: $BGColor;
+        text-decoration: none;
+        border: none;
+        transition: 0.25s ease;
+        font-size: 0.875rem;
+        font-weight: 300;
+        cursor: pointer;
 
-    color: $BGColor;
-    background: $lightCoffee;
-    transition: 0.25s ease;
+        color: $BGColor;
+        background: $lightCoffee;
+        transition: 0.25s ease;
     }
 
     // .imgContainer {
