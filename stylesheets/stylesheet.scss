@@ -177,7 +177,7 @@ nav {
 
 /* General Typography -------------------------------------------------------*/
 
-a {
+a:not(.button) {
   cursor: pointer;
   color: var(--LinkColor);
   text-decoration: none;

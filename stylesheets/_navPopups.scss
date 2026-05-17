@@ -13,7 +13,7 @@ $mobileBreakpoint: 768px;
 $pageMargin: 2rem; 
 
 @mixin fontTitle {
-    font-family: "Krona One", sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.25em;
@@ -45,22 +45,18 @@ $pageMargin: 2rem;
 .button {
     @include fontTitle();
     display: block;
-    padding: 1rem;
-    background: $coffee;
-    color: $BGColor;
+    // margin: $pageMargin auto auto auto;
+    padding: 0.75rem 1rem;
+    background: $lightCoffee;
+    color: #fff;
     text-decoration: none;
     border: none;
     transition: 0.25s ease;
+    font-size: 0.875rem;
     font-weight: 300;
     cursor: pointer;
-
-    color: $BGColor;
-    background: $lightCoffee;
     transition: 0.25s ease;
-    &:hover { 
-        opacity: 0.75; 
-        &::after { opacity: 1; }
-    }
+    &:hover { opacity: 0.75; }
 }
 
 #navlinksPopup {
@@ -127,7 +123,7 @@ $pageMargin: 2rem;
             letter-spacing: normal;
             text-transform: none;
         }
-        a { 
+        a:not(.button) { 
             font-weight: 800;
             color: $veryLightCoffee; 
         }
