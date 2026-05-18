@@ -971,6 +971,7 @@ body {
 
 #navlinksPopup .cookieDropContent h4 {
   line-height: 150%;
+  margin-top: 1.5rem;
 }
 #navlinksPopup .cookieDropContent p {
   margin: 2rem;
