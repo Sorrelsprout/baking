@@ -980,7 +980,7 @@ body {
   position: relative;
   width: 100%;
   max-height: 20rem;
-  margin: 2rem auto;
+  margin: 2rem auto auto auto;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -996,6 +996,9 @@ body {
 }
 #navlinksPopup .cookieDropContent iframe .NlSFn .eIWOtV {
   text-align: center !important;
+}
+#navlinksPopup .cookieDropContent .button {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
