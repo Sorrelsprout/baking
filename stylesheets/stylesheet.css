@@ -39,7 +39,7 @@ body {
 nav, .footer {
   display: flex;
   flex-direction: row;
-  height: var(--navHeight);
+  height: 6rem;
   max-width: var(--navWidth);
   width: 100%;
   padding: 2rem 0;
@@ -85,6 +85,51 @@ nav #insta, nav #patreon {
   display: none;
   font-size: 2.5em;
   cursor: pointer;
+}
+
+/* Insta Grid -----------------------------------------------------------------*/
+.instaWidget {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 6rem;
+}
+.instaWidget .crt-feed {
+  margin: -1px;
+}
+.instaWidget .crt-feed > * {
+  transform: scale(0.995);
+  padding: 0 !important;
+}
+.instaWidget .crt-feed .crt-grid-post-image,
+.instaWidget .crt-feed .crt-grid-post-tokyo .crt-grid-post-content {
+  border-radius: 0 !important;
+}
+.instaWidget .crt-feed .crt-feed-window {
+  margin-bottom: 1rem;
+}
+.instaWidget button.crt-load-more {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #615049;
+  display: block;
+  margin: 2rem auto auto auto;
+  padding: 0.75rem 1rem;
+  background: #615049;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  transition: 0.25s ease;
+  font-size: 0.875rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.instaWidget button.crt-load-more:hover {
+  opacity: 0.75;
 }
 
 /* Project Grid ---------------------------------------------------------------*/
