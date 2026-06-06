@@ -100,8 +100,9 @@ nav #insta, nav #patreon {
   transform: scale(0.995);
   padding: 0 !important;
 }
-.instaWidget .crt-feed .crt-grid-post-image,
-.instaWidget .crt-feed .crt-grid-post-tokyo .crt-grid-post-content {
+.instaWidget .crt-feed .crt-grid-post-tokyo .crt-grid-post-content,
+.instaWidget .crt-feed .crt-grid-post-tokyo .crt-post-hover,
+.instaWidget .crt-feed .crt-grid-post-tokyo .crt-grid-post-image {
   border-radius: 0 !important;
 }
 .instaWidget .crt-feed .crt-feed-window {

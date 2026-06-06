@@ -115,11 +115,13 @@ nav {
         transform: scale( 0.995);
         padding: 0 !important;
     }
-    .crt-grid-post-image,
-    .crt-grid-post-tokyo .crt-grid-post-content{
-        border-radius: 0 !important;
+    .crt-grid-post-tokyo {
+        .crt-grid-post-content,
+        .crt-post-hover,
+        .crt-grid-post-image {
+          border-radius: 0 !important;
+      }
     }
-
     .crt-feed-window { margin-bottom: 1rem; }
   }
 
