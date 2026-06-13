@@ -1015,7 +1015,14 @@ body {
   transition: 0.25s ease;
 }
 
+#navlinksPopup .cookieDropContent {
+  margin-top: 6rem;
+}
+#navlinksPopup .cookieDropContent h3 {
+  font-size: 1rem;
+}
 #navlinksPopup .cookieDropContent h4 {
+  font-size: 0.875rem;
   line-height: 150%;
   margin-top: 1.5rem;
 }
@@ -1025,15 +1032,17 @@ body {
 #navlinksPopup .cookieDropContent .imgContainer {
   position: relative;
   width: 100%;
-  max-height: 20rem;
-  margin: 2rem auto auto auto;
+  max-height: 25rem;
+  margin: 1rem auto auto auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 #navlinksPopup .cookieDropContent .imgContainer img {
   flex: 1;
-  width: 50%;
+  width: 65%;
+  max-width: 65%;
   border-radius: 0.25rem;
 }
 #navlinksPopup .cookieDropContent iframe {
@@ -1044,7 +1053,7 @@ body {
   text-align: center !important;
 }
 #navlinksPopup .cookieDropContent .button {
-  margin-top: 2rem;
+  margin-top: 1.3333333333rem;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
