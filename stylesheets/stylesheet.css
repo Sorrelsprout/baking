@@ -74,7 +74,7 @@ nav #insta, nav #newsletter {
   margin: 0.45rem 0 0.45rem 1.5rem;
   margin: 0.45rem 1.5rem 0.9rem 0;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   nav #insta, nav #newsletter {
     order: 2;
     margin-top: 0.75rem;
